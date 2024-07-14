@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* primary css start*/
+.display-flex,
+.nav-links {
+    display: flex;
+}
+
+.text-gray {
+    color: rgb(66, 66, 66);
+}
+
+.light-bg {
+    background-color: rgba(255, 144, 14, 0.1);
+}
+
+.btn {
+    color: white;
+    background-color: rgb(255, 144, 14);
+    font-size: 1rem;
+    font-weight: 550px;
+    width: 180px;
+    height: 54px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* primary css end */
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+}
+main > section{
+    margin-top: 50px;
+}
+.title {
+    font-size: 30px;
+    font-weight: 700px;
+    margin-top: 2.5rem;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    font-weight: 500px;
+}
+
+.navbar,
+.banner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* //banarer */
+.banarer-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.banarer-title {
+    font-size: 40px;
+    font-weight: 700px;
+}
+.banarer-image img{
+    width: 100%;
+}
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    align-items: center;
+}
+.image-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 7px;
+}
+.main-container{
+    align-items: center;
+}
+.main-text-container{
+    margin-left: 70px;
+}
+@media screen  and (max-width:600px){
+    .display-flex,
+    .main-container
+    {
+        flex-direction: column;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-text-container{
+        margin: 0;
+        margin-left: 40px;
+    }
+    .image-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media  screen and (min-width:500px) and (max-width:760px){
+    .main-container{
+        flex-direction: column;
+    }
+}
