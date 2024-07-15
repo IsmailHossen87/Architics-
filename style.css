@@ -35,9 +35,11 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-main > section{
+
+main>section {
     margin-top: 50px;
 }
+
 .title {
     font-size: 30px;
     font-weight: 700px;
@@ -74,46 +76,107 @@ main > section{
     font-size: 40px;
     font-weight: 700px;
 }
-.banarer-image img{
+
+.banarer-image img {
     width: 100%;
 }
-main{
+
+main {
     max-width: 1000px;
     margin: 0 auto;
     margin-top: 30px;
     align-items: center;
 }
-.image-container{
+
+.image-container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 7px;
 }
-.main-container{
+
+.main-container {
     align-items: center;
 }
-.main-text-container{
+
+.main-text-container {
     margin-left: 70px;
 }
-@media screen  and (max-width:600px){
+
+/* fact section start */
+.fact-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.fact {
+    border: 1px solid rgb(255, 144, 14);
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    margin: 20px 0;
+}
+.fact-text{
+    font-size: 2rem;
+    margin: 5px;
+}
+
+.sponsor{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.sponsor-image{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;   
+}
+.sponsor-image img{
+    filter: grayscale(100%);
+}
+@media screen and (max-width:600px) {
+
     .display-flex,
-    .main-container
-    {
+    .main-container {
         flex-direction: column;
     }
-    .nav-links{
+
+    .nav-links {
         display: flex;
         flex-direction: column;
     }
-    .main-text-container{
+    .main-text-container {
         margin: 0;
         margin-left: 40px;
     }
-    .image-container{
-        grid-template-columns: repeat(1,1fr);
+    .image-container,
+    .fact-parent,.sponsor-image
+    {
+        grid-template-columns: 1fr;
+    }
+    .sponsor-image{
+        gap: 50px;
+        justify-content: center;
+    }
+    .fact-parent{
+        justify-items: center;
     }
 }
-@media  screen and (min-width:500px) and (max-width:760px){
-    .main-container{
+
+@media screen and (min-width:600px) and (max-width:768px) {
+    .main-container {
         flex-direction: column;
     }
+
+    .main-text-container {
+        margin: 20px 30px;
+    }
+    .sponsor-image,.image-container{
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+    }
+
 }
